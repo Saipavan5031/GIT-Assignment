@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Word and Number Count</title>
+        <style>
+            .bdy{
+                text-align: center;
+            }
+        </style>
+        
+    </head>
+        <body>
+            <div class="bdy">
+                <h2>Number of words and letters in a sentance</h2>
+                <form>
+                 <label for="input">Enter a sentance</label><br><br>
+                 <textarea type="text" id="input" cols="50" rows="5"></textarea><br><br>
+                 <input type="button" onclick="noOfWords()" value="Word Count">
+                 <input type="button" onclick="noOfLetters()" value="Word Count">
+                </form>
+               <h2 id="result"></h2>
+            </div>
+            <script>
+                var sentance=document.getElementById("input").value;
+                function noOfWords()
+                {   
+               var sentance=document.getElementById("input").value;
+                var count=0;
+                var wordcount=0;
+                     for(let i=0;i<sentance.length;i++)
+                        {
+                             if(sentance[i]==' ')
+                             count++;
+                         }
+                        wordcount=count+1;
+                       document.getElementById("result").innerHTML='no.of words in a sentance are '+wordcount;
+                 }    
+                function noOfLetters()
+                {
+                 var sentance=document.getElementById("input").value;
+                 letterCount=0;
+                    for(let i=0;i<sentance.length;i++)
+                        {
+                            if((sentance[i]!=' ' && !(sentance[i]>='0' && sentance[i]<='9')))
+                                {
+                                    letterCount++;
+                                }
+                        }
+                        document.getElementById("result").innerHTML='no.of letters in a sentance are '+letterCount;
+                }       
+
+            </script>
+         
+        </body>
+</html>
