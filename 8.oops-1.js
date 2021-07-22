@@ -19,3 +19,5 @@ class Employee extends Company{
 let emp=new Employee('sai',22,'CSE');
 emp.work();
 emp.done();
+
+console.log("made changes")
